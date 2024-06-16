@@ -1,10 +1,8 @@
 package org.example;
 
 import java.io.*;
-import java.lang.reflect.Array;
 import java.net.Socket;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Objects;
 
 public class ClientHandler implements Runnable {
@@ -79,7 +77,7 @@ public class ClientHandler implements Runnable {
                         Book book = new Book(tittle, author, genre, copies);
                         boolean success = BookHandler.registeBook(book);
 
-                        message = success ? clientUsername + "registered the book " + message: "Failed to register the book" + message;
+                        message = success ? clientUsername + "registered the book: " + message: "Failed to register the book" + message;
                         broadcastMessage(message);
                         clientState = ClientState.NORMAL.getDescricao();
                         continue;
@@ -158,8 +156,8 @@ public class ClientHandler implements Runnable {
             if (socket != null && socket.isConnected()) {
                 socket.close();
             }
-        } catch (IOException e) {
-            e.printStackTrace();
+        } catch (Exception e) {
+            System.out.println(e);
         }
     }
 }

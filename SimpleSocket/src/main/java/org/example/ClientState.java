@@ -6,7 +6,7 @@ public enum ClientState {
     DEVOLVENDO_LIVRO("devolvendo livro"),
     CADASTRANDO_LIVRO("cadastrando livro");
 
-    private String descricao;
+    private final String descricao;
 
     ClientState(String descricao) {
         this.descricao = descricao;

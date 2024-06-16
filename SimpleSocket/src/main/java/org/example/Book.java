@@ -6,9 +6,6 @@ public class Book {
     private String genre;
     private int copies;
 
-//    public void Book(){
-//    }
-
     public Book(String tittle, String author, String genre, int copies) {
         this.tittle = tittle;
         this.author = author;
@@ -18,26 +15,6 @@ public class Book {
 
     public String getTittle() {
         return tittle;
-    }
-
-    public void setTittle(String tittle) {
-        this.tittle = tittle;
-    }
-
-    public String getAuthor() {
-        return author;
-    }
-
-    public void setAuthor(String author) {
-        this.author = author;
-    }
-
-    public String getGenre() {
-        return genre;
-    }
-
-    public void setGenre(String genre) {
-        this.genre = genre;
     }
 
     public int getCopies() {

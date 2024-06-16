@@ -16,7 +16,6 @@ public class Client {
             this.socket = socket;
             this.bufferedWriter = new BufferedWriter(new OutputStreamWriter(socket.getOutputStream()));
             this.bufferedReader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
-            // Send the username as soon as the client is created
             bufferedWriter.write(userName);
             bufferedWriter.newLine();
             bufferedWriter.flush();
@@ -80,8 +79,8 @@ public class Client {
             if (socket != null) {
                 socket.close();
             }
-        } catch (IOException e) {
-            e.printStackTrace();
+        } catch (Exception e) {
+            System.out.println(e);
         }
     }
 

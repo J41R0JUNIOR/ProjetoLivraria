@@ -7,7 +7,7 @@ public enum ClientOptions {
     REGISTER_BOOKS("4"),
     OUT("5");
 
-    private String description;
+    private final String description;
 
     ClientOptions(String description) {
         this.description = description;
