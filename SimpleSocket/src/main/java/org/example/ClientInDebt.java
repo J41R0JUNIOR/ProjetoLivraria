@@ -24,7 +24,4 @@ public class ClientInDebt {
     public void setBook(String book) {
         this.book = book;
     }
-
 }
-
-
