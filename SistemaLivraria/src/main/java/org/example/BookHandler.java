@@ -9,8 +9,8 @@ import java.util.ArrayList;
 
 public class BookHandler {
 
-    private static final String BOOKS_FILE_PATH = "livros.json";
-    private static final String RENT_BOOKS_FILE_PATH = "alugueis.json";
+    private static final String BOOKS_FILE_PATH = "./SistemaLivraria/livros.json";
+    private static final String RENT_BOOKS_FILE_PATH = "./SistemaLivraria/alugueis.json";
 
     public static ArrayList<Book> searchBooks() {
         return loadBooksFromFile();
