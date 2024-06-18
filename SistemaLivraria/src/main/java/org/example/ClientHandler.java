@@ -108,6 +108,7 @@ public class ClientHandler implements Runnable {
 
                     } else if (message.startsWith(out)) {
                         closeEverything(socket, bufferedReader, bufferedWriter);
+                        System.out.println("Goodbye: " + clientUsername);
 
                     } else {
                         broadcastMessage("Type a real option");
