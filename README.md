@@ -1,5 +1,12 @@
 # AT3/N2 - Atividade Prática Coletiva - Bimestre N2
 
+## Integrantes
+- Jairo Júnior
+- Ítalo Santana
+- Gabriel de Oliveira Batista
+- Guilherme Akio
+
+
 ## Descrição do Projeto
 
 Este projeto foi desenvolvido para a disciplina de Programação, visando a implementação de um servidor e cliente utilizando sockets em Java 17. O servidor é responsável por gerenciar o registro/cadastro de livros de uma biblioteca, oferecendo funcionalidades como listagem, aluguel, devolução e cadastro de livros. As operações realizadas pelo usuário são refletidas em um arquivo JSON que atua como base de dados da biblioteca.
