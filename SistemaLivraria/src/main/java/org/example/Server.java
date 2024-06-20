@@ -7,10 +7,12 @@ import java.net.Socket;
 public class Server {
     private final ServerSocket serverSocket;
 
+    // Criação do Socket
     public Server(ServerSocket serverSocket) {
         this.serverSocket = serverSocket;
     }
 
+    // Loop para ficar recebendo clientes e aceitar conexoes
     public void startServer() {
         try {
             while (!serverSocket.isClosed()) {
@@ -26,6 +28,7 @@ public class Server {
         }
     }
 
+    // metodo para fechar o servidor
     public void closeServerSocket() {
         try {
             if (serverSocket != null) {
@@ -37,6 +40,7 @@ public class Server {
     }
 
     public static void main(String[] args) throws IOException {
+        // Cria um Server com porta 1111
         ServerSocket serverSocket = new ServerSocket(1111);
         Server server = new Server(serverSocket);
         server.startServer();

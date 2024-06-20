@@ -26,6 +26,7 @@ public class Client {
         }
     }
 
+    // Metodo para mandar a mensagem, executado apos o listenForMessage
     public void sendMessage() {
         try {
             Scanner scanner = new Scanner(System.in);
@@ -42,6 +43,7 @@ public class Client {
         }
     }
 
+    // Ler uma mensagem enquanto o socket estiver conectado, se
     public void listenForMessage() {
         new Thread(new Runnable() {
             @Override
