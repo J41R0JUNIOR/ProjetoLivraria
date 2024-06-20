@@ -6,7 +6,9 @@ import java.util.ArrayList;
 import java.util.Objects;
 
 public class ClientHandler implements Runnable {
+    // Lista clientes
     public static ArrayList<ClientHandler> clientHandlers = new ArrayList<>();
+
     private Socket socket;
     private BufferedReader bufferedReader;
     private BufferedWriter bufferedWriter;
@@ -38,6 +40,7 @@ public class ClientHandler implements Runnable {
         String registerBook = String.valueOf(ClientOptions.REGISTER_BOOKS.getDescription());
         String out = String.valueOf(ClientOptions.OUT.getDescription());
 
+        // Loop da tela de opções, utilizando o enum ClientOptions
         while (socket.isConnected()) {
             try {
                 if (clientState.equals(ClientState.NORMAL.getDescricao())) {
@@ -85,7 +88,7 @@ public class ClientHandler implements Runnable {
 
                 }
 
-
+                // Le a opção do cliente
                 message = bufferedReader.readLine();
 
                 if (message != null) {

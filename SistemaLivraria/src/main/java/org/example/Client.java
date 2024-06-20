@@ -90,9 +90,17 @@ public class Client {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter your name for enter the library: ");
         String username = scanner.nextLine();
+
+        // Conexao com o servidor
         Socket socket = new Socket("localhost", 1111);
+
+        // Criação do cliente com o nome de usuário fornecido
         Client client = new Client(socket, username);
+
+        // Inicia Thread para ouvir mensagens do servidor
         client.listenForMessage();
+
+        // Manda mensagem do cliente para o servidor
         client.sendMessage();
     }
 }

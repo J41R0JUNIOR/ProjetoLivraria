@@ -12,6 +12,7 @@ public class BookHandler {
     private static final String BOOKS_FILE_PATH = "./SistemaLivraria/livros.json";
     private static final String RENT_BOOKS_FILE_PATH = "./SistemaLivraria/alugueis.json";
 
+    // buscar todos os livros a partir do arquivo JSON
     public static ArrayList<Book> searchBooks() {
         return loadBooksFromFile();
     }
@@ -99,6 +100,7 @@ public class BookHandler {
         return false;
     }
 
+    // carregar os livros a partir do json
     private static ArrayList<Book> loadBooksFromFile() {
         ArrayList<Book> books = new ArrayList<>();
         try {
