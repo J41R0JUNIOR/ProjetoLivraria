@@ -14,6 +14,7 @@ public class Server {
 
     // Loop para ficar recebendo clientes e aceitar conexoes
     public void startServer() {
+        System.out.println("Server up on port: " + this.serverSocket.getLocalPort());
         try {
             while (!serverSocket.isClosed()) {
                 Socket socket = serverSocket.accept();
